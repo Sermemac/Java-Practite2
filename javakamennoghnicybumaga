@@ -1,0 +1,76 @@
+package kamnoghbum;
+import java.util.Scanner;
+public class KamNoghBum {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int computerchet = 0;
+        int userchet = 0;
+        int computer = (int) (Math.random() * 3 + 1);
+        System.out.println("Введите (камень или ножницы или бумага");
+        String user = sc.nextLine();
+        int a = 1;
+        int b = 2;
+        
+        while (a != b) {
+            
+            if (null != user)switch (user) {
+                case "Камень":
+            switch (computer) {
+                case 1:
+                    System.out.println("Вы выбрали камень, но ваш соперник тоже выбрал камень поэтому ничья и счёт: " + userchet + ":" + computerchet);
+                    break;
+                case 2:
+                    userchet += 1;
+                    System.out.println("Вы выбрали камень, но ваш соперник выбрал ножницы, поэтому вы выйграли его и счёт: " + userchet + ":" + computerchet);
+                    break;
+                case 3:
+                    computerchet += 1;
+                    System.out.println("Вы выбрали камень, но ваш соперник выбрал бумагу, поэтому вы проиграли его и счёт: " + userchet + ":" + computerchet);
+                    break;
+                default:
+                    break;
+            }
+break;
+                case "Ножницы":
+            switch (computer) {
+                case 1:
+                    computerchet += 1;
+                    System.out.println("Вы выбрали ножницы, но ваш соперник выбрал камень поэтому он выйграл и счёт: " + userchet + ":" + computerchet);
+                    break;
+                case 2:
+                    System.out.println("Вы выбрали ножницы, но ваш соперник тоже выбрал ножницы, поэтому ничья и счёт: " + userchet + ":" + computerchet);
+                    break;
+                case 3:
+                    userchet += 1;
+                    System.out.println("Вы выбрали ножницы, но ваш соперник выбрал бумагу, поэтому вы выйграли его и счёт: " + userchet + ":" + computerchet);
+                    break;
+                default:
+                    break;
+            }
+break;
+                case "Бумага":
+            switch (computer) {
+                case 1:
+                    userchet += 1;
+                    System.out.println("Вы выбрали бумагу, но ваш соперник выбрал камень поэтому вы выйграли и счёт: " + userchet + ":" + computerchet);
+                    break;
+                case 2:
+                    computerchet += 1;
+                    System.out.println("Вы выбрали бумагу, но ваш соперник выбрал ножницы, поэтому вы проиграли и счёт: " + userchet + ":" + computerchet);
+                    break;
+                case 3:
+                    System.out.println("Вы выбрали бумагу, но ваш соперник тоже выбрал бумагу, поэтому ничья и счёт: " + userchet + ":" + computerchet);
+                    break;
+                default:
+                    break;
+            }
+break;
+                default:
+                    break;
+            }
+        
+    }
+    
+}
+}
