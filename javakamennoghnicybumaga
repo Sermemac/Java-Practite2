@@ -4,18 +4,17 @@ public class KamNoghBum {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int a = 2;
+        int b = 1;
+        int chet = 5;
         int computerchet = 0;
         int userchet = 0;
-        int computer = (int) (Math.random() * 3 + 1);
-        System.out.println("Введите (камень или ножницы или бумага");
-        String user = sc.nextLine();
-        int a = 1;
-        int b = 2;
-        
         while (a != b) {
-            
+            int computer = (int) (Math.random() * 3 + 1);
+            System.out.println("Введите (камень или ножницы или бумага");
+            String user = sc.nextLine();
             if (null != user)switch (user) {
-                case "Камень":
+                case "Stone":
             switch (computer) {
                 case 1:
                     System.out.println("Вы выбрали камень, но ваш соперник тоже выбрал камень поэтому ничья и счёт: " + userchet + ":" + computerchet);
@@ -32,7 +31,7 @@ public class KamNoghBum {
                     break;
             }
 break;
-                case "Ножницы":
+                case "Scissors":
             switch (computer) {
                 case 1:
                     computerchet += 1;
@@ -49,7 +48,7 @@ break;
                     break;
             }
 break;
-                case "Бумага":
+                case "Paper":
             switch (computer) {
                 case 1:
                     userchet += 1;
@@ -69,8 +68,14 @@ break;
                 default:
                     break;
             }
-        
+            if (computerchet == chet) {
+                System.out.println("Компьютер выйграл со счётом: " + userchet + ":" + computerchet);
+                break;    
     }
-    
+            else if (userchet == chet) {
+                System.out.println("Вы выйграли со счётом: " + userchet + ":" + computerchet);
+                break;
+}
+}
 }
 }
